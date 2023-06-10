@@ -68,9 +68,11 @@ class _HomeMainState extends State<HomeMain> {
             BottomNavigationBarItem(
               icon: Container(
                 margin: const EdgeInsets.only(top: 20),
-                child: Image.asset(
-                  'assets/icons/icon_profile.png',
-                ),
+                child: index == 3
+                    ? Image.asset('assets/icons/icon_setting_black.png')
+                    : Image.asset(
+                        'assets/icons/icon_setting.png',
+                      ),
               ),
               label: '',
             )
