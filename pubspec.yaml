@@ -62,6 +62,21 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
+    - assets/icons/icon_bahasa.png
+    - assets/icons/icon_dompet_black.png
+    - assets/icons/icon_dompet.png
+    - assets/icons/icon_donut.png
+    - assets/icons/icon_grafik_black.png
+    - assets/icons/icon_grafik.png
+    - assets/icons/icon_money.png
+    - assets/icons/icon_notifikasi.png
+    - assets/icons/icon_profile.png
+    - assets/icons/icon_refresh.png
+    - assets/icons/icon_setting_black.png
+    - assets/icons/icon_setting.png
+    - assets/icons/icon_transaksi_black.png
+    - assets/icons/icon_transaksi.png
+    - assets/icons/icon_warna.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
