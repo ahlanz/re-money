@@ -89,7 +89,25 @@ class TambahDompet extends StatelessWidget {
                 borderRadius: BorderRadius.circular(5),
               ),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: const Text('Berhasil disimpan'),
+                        content: const Text('Mantap'),
+                        actions: <Widget>[
+                          TextButton(
+                            child: const Text('Tutup'),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
                 child: Text(
                   'Simpan',
                   style: primaryTextStyle.copyWith(

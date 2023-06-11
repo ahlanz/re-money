@@ -28,7 +28,7 @@ class ProfilePage extends StatelessWidget {
       );
     }
 
-     Widget inputNama() {
+    Widget inputNama() {
       return Container(
         width: double.infinity,
         height: 57,
@@ -51,7 +51,7 @@ class ProfilePage extends StatelessWidget {
       );
     }
 
-     Widget inputEmail() {
+    Widget inputEmail() {
       return Container(
         width: double.infinity,
         height: 57,
@@ -74,7 +74,7 @@ class ProfilePage extends StatelessWidget {
       );
     }
 
-     Widget button() {
+    Widget button() {
       return Container(
         width: double.infinity,
         margin: const EdgeInsets.only(top: 35),
@@ -89,7 +89,25 @@ class ProfilePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(5),
               ),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: const Text('Berhasil disimpan'),
+                        content: const Text('Mantap'),
+                        actions: <Widget>[
+                          TextButton(
+                            child: const Text('Tutup'),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
                 child: Text(
                   'Simpan',
                   style: primaryTextStyle.copyWith(
@@ -101,7 +119,6 @@ class ProfilePage extends StatelessWidget {
         ),
       );
     }
-
 
     Widget content() {
       return Container(

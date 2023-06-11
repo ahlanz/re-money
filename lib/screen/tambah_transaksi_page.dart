@@ -223,199 +223,197 @@ class _TambahTransaksiState extends State<TambahTransaksi> {
         margin: const EdgeInsets.only(top: 13),
         child: TextButton(
           onPressed: () {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                backgroundColor: backgroundColor,
-                behavior: SnackBarBehavior.fixed,
-                content: Column(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(color: primaryColor),
-                      width: double.infinity,
-                      padding:
-                          const EdgeInsets.only(top: 16, bottom: 10, left: 26),
-                      child: Text(
-                        'Pilih Dompet',
-                        style: primaryTextStyle.copyWith(
-                            fontSize: 23, fontWeight: FontWeight.w500),
+            showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(color: primaryColor),
+                        width: double.infinity,
+                        padding: const EdgeInsets.only(
+                            top: 16, bottom: 10, left: 26),
+                        child: Text(
+                          'Pilih Dompet',
+                          style: primaryTextStyle.copyWith(
+                              fontSize: 23, fontWeight: FontWeight.w500),
+                        ),
                       ),
-                    ),
-                    Row(
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              width: 100,
-                              height: 68,
-                              margin: const EdgeInsets.only(top: 5),
-                              padding: const EdgeInsets.only(
-                                top: 10,
-                                bottom: 4,
-                                left: 26,
-                                right: 23,
-                              ),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                  border: Border.all()),
-                              child: SizedBox(
-                                width: 51,
-                                child: Text(
-                                  'Uang\nTunai',
-                                  style: primaryTextStyle.copyWith(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400),
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                width: 100,
+                                height: 68,
+                                margin: const EdgeInsets.only(top: 5),
+                                padding: const EdgeInsets.only(
+                                  top: 10,
+                                  bottom: 4,
+                                  left: 26,
+                                  right: 23,
+                                ),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    border: Border.all()),
+                                child: SizedBox(
+                                  width: 51,
+                                  child: Text(
+                                    'Uang\nTunai',
+                                    style: primaryTextStyle.copyWith(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400),
+                                  ),
                                 ),
                               ),
-                            ),
-                            const SizedBox(
-                              height: 13,
-                            ),
-                            Container(
-                              width: 107,
-                              height: 68,
-                              margin: const EdgeInsets.only(top: 5),
-                              padding: const EdgeInsets.only(
-                                top: 22,
-                                bottom: 19,
-                                left: 24,
-                                right: 21,
+                              const SizedBox(
+                                height: 13,
                               ),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                  border: Border.all()),
-                              child: SizedBox(
-                                width: 55,
-                                child: Text(
-                                  'Gopay',
-                                  style: primaryTextStyle.copyWith(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400),
+                              Container(
+                                width: 107,
+                                height: 68,
+                                margin: const EdgeInsets.only(top: 5),
+                                padding: const EdgeInsets.only(
+                                  top: 22,
+                                  bottom: 19,
+                                  left: 24,
+                                  right: 21,
+                                ),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    border: Border.all()),
+                                child: SizedBox(
+                                  width: 55,
+                                  child: Text(
+                                    'Gopay',
+                                    style: primaryTextStyle.copyWith(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                          // untuk kolom bca dan dana
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                width: 100,
+                                height: 68,
+                                margin: const EdgeInsets.only(top: 5),
+                                padding: const EdgeInsets.only(
+                                  top: 21,
+                                  bottom: 20,
+                                  left: 33,
+                                  right: 10,
+                                ),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    border: Border.all()),
+                                child: SizedBox(
+                                  width: 51,
+                                  child: Text(
+                                    'BCA',
+                                    style: primaryTextStyle.copyWith(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400),
+                                  ),
                                 ),
                               ),
-                            )
-                          ],
-                        ),
-                        // untuk kolom bca dan dana
-                        const SizedBox(
-                          width: 10,
-                        ),
-                         Column(
-                          children: [
-                            Container(
-                              width: 100,
-                              height: 68,
-                              margin: const EdgeInsets.only(top: 5),
-                              padding: const EdgeInsets.only(
-                                top: 21,
-                                bottom: 20,
-                                left: 33,
-                                right: 10,
+                              const SizedBox(
+                                height: 13,
                               ),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                  border: Border.all()),
-                              child: SizedBox(
-                                width: 51,
-                                child: Text(
-                                  'BCA',
-                                  style: primaryTextStyle.copyWith(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400),
+                              Container(
+                                width: 107,
+                                height: 68,
+                                margin: const EdgeInsets.only(top: 5),
+                                padding: const EdgeInsets.only(
+                                  top: 22,
+                                  bottom: 19,
+                                  left: 24,
+                                  right: 21,
+                                ),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    border: Border.all()),
+                                child: SizedBox(
+                                  width: 55,
+                                  child: Text(
+                                    'DANA',
+                                    style: primaryTextStyle.copyWith(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                          // untuk kolom BNI dan Shoppeepay
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                width: 100,
+                                height: 68,
+                                margin: const EdgeInsets.only(top: 5),
+                                padding: const EdgeInsets.only(
+                                  top: 21,
+                                  bottom: 20,
+                                  left: 33,
+                                  right: 10,
+                                ),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    border: Border.all()),
+                                child: SizedBox(
+                                  width: 51,
+                                  child: Text(
+                                    'BNI',
+                                    style: primaryTextStyle.copyWith(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400),
+                                  ),
                                 ),
                               ),
-                            ),
-                            const SizedBox(
-                              height: 13,
-                            ),
-                            Container(
-                              width: 107,
-                              height: 68,
-                              margin: const EdgeInsets.only(top: 5),
-                              padding: const EdgeInsets.only(
-                                top: 22,
-                                bottom: 19,
-                                left: 24,
-                                right: 21,
+                              const SizedBox(
+                                height: 13,
                               ),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                  border: Border.all()),
-                              child: SizedBox(
-                                width: 55,
-                                child: Text(
-                                  'DANA',
-                                  style: primaryTextStyle.copyWith(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400),
+                              Container(
+                                width: 100,
+                                height: 68,
+                                margin: const EdgeInsets.only(top: 5),
+                                padding: const EdgeInsets.only(
+                                  top: 10,
+                                  bottom: 4,
+                                  left: 22,
+                                  right: 13,
                                 ),
-                              ),
-                            )
-                          ],
-                        ),
-                        // untuk kolom BNI dan Shoppeepay
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              width: 100,
-                              height: 68,
-                              margin: const EdgeInsets.only(top: 5),
-                              padding: const EdgeInsets.only(
-                                top: 21,
-                                bottom: 20,
-                                left: 33,
-                                right: 10,
-                              ),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                  border: Border.all()),
-                              child: SizedBox(
-                                width: 51,
-                                child: Text(
-                                  'BNI',
-                                  style: primaryTextStyle.copyWith(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    border: Border.all()),
+                                child: SizedBox(
+                                  width: 55,
+                                  height: 54,
+                                  child: Text(
+                                    'ShopeePay',
+                                    style: primaryTextStyle.copyWith(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400),
+                                  ),
                                 ),
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 13,
-                            ),
-                            Container(
-                              width: 100,
-                              height: 68,
-                              margin: const EdgeInsets.only(top: 5),
-                              padding: const EdgeInsets.only(
-                                top: 10,
-                                bottom: 4,
-                                left: 22,
-                                right: 13,
-                              ),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(5),
-                                  border: Border.all()),
-                              child: SizedBox(
-                                width: 55,
-                                height: 54,
-                                child: Text(
-                                  'ShopeePay',
-                                  style: primaryTextStyle.copyWith(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            );
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  );
+                });
           },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
