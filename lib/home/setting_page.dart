@@ -53,7 +53,9 @@ class SettingPage extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 36,),
+            const SizedBox(
+              height: 36,
+            ),
             Row(
               children: [
                 Image.asset('assets/icons/icon_warna.png'),
@@ -67,19 +69,51 @@ class SettingPage extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 26,),
-            Row(
-              children: [
-                Image.asset('assets/icons/icon_bahasa.png'),
-                const SizedBox(
-                  width: 24,
+            const SizedBox(
+              height: 26,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/bahasa');
+              },
+              child: SizedBox(
+                child: Row(
+                  children: [
+                    Image.asset('assets/icons/icon_bahasa.png'),
+                    const SizedBox(
+                      width: 24,
+                    ),
+                    Text(
+                      'Bahasa',
+                      style: primaryTextStyle.copyWith(
+                          fontSize: 18, fontWeight: FontWeight.w400),
+                    ),
+                  ],
                 ),
-                Text(
-                  'Bahasa',
-                  style: primaryTextStyle.copyWith(
-                      fontSize: 18, fontWeight: FontWeight.w400),
+              ),
+            ),
+            const SizedBox(
+              height: 26,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/profile');
+              },
+              child: SizedBox(
+                child: Row(
+                  children: [
+                    Image.asset('assets/icons/icon_user.png'),
+                    const SizedBox(
+                      width: 24,
+                    ),
+                    Text(
+                      'Profile',
+                      style: primaryTextStyle.copyWith(
+                          fontSize: 18, fontWeight: FontWeight.w400),
+                    ),
+                  ],
                 ),
-              ],
+              ),
             )
           ],
         ),
