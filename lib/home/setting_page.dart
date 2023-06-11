@@ -22,7 +22,7 @@ class SettingPage extends StatelessWidget {
     Widget content() {
       return Container(
         margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 28),
-        child: Column(
+        child: ListView(
           children: [
             Row(
               children: [
